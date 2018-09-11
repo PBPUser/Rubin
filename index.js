@@ -58,6 +58,9 @@ robot.on("message" , function(message)  {
         case "tust":
         message.channel.sendMessage("AGA");
         break;
+        case "workingtest":
+        message.channel.sendMessage("i am WORKING");
+        break;
         case "kick":
         if (message.member.permissions.has('KICK_MEMBERS')){
     if (!message.guild) return;
