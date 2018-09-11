@@ -164,32 +164,27 @@ robot.on("message" , function(message)  {
 
         break
 
-        case "play":
-        if(!message.member.voiceChannel)
-    return message.channel.send("You must be in a voice channel for me to start playing music");
-  if(message.guild.me.voiceChannel)
-return message.channel.send("Im busy at a different voice channel on the server. Try again later.");
+        case "play":        /*if(!args[1]) {
+            message.channel.sendMessage("Укажите ссылку!");
+            return;
+        }
 
-  if(!args[0])
-return message.channel.send("Please enter a youtube URL for me to load the song from.");
+        if(!message.member.voiceChannel){
+            message.channel.sendMessage("Вы не в голосовом канале!");
+            return;
+        }
 
-  let validate = await ytdl.validateURL(args[0]);
-  if(!validate)
-    return message.channel.send("Whoops, re-check the URL you gave me, I am getting an error while trying to play the song. ");
+        if(!servers[message.guild.id]) servers[message.guild.id] = {
+            quene: []
+        };
 
-  let info = await ytdl.getInfo(args[0]);
-  let voiceChannel = message.member.voiceChannel;
-  let connection = await voiceChannel.join();
-  let dispatcher = await connection.playStream(ytdl(args[0], {filter: 'audioonly'}))
-    .on("end", end => {
-      message.channel.send(`Finished Playing: ${info.title}`);
-      voiceChannel.leave();
-    })
-    .on("error", error => {
-      console.error(error);
-      message.channel.send("Error Occurred during playback. Try again later.");
-    });
-  return message.channel.send(`Now Playing: ${info.title}`);
+        var server = servers[message.guild.id];
+
+        server.quene.push(args[1]);
+
+        if (!message.guild.voiceConnection) message.member.voiceChannel.join().then(function(Connection){
+            play(Connection, message);
+    });*/
     message.channel.sendMessage("Данная команда не завелась с пинка");
         break;
 
