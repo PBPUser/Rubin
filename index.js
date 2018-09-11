@@ -54,7 +54,7 @@ robot.on("message" , function(message)  {
 
     var args = message.content.substring(PREFIX.length).split(" ");
 
-    switch (args[0]) {
+    switch (args[0].toLoverCase()) {
         case "tust":
         message.channel.sendMessage("AGA");
         break;
@@ -200,12 +200,15 @@ robot.on("message" , function(message)  {
         if(message.guild.voiceConnection) message.guild.voiceConnection.disconnect();*/
         message.channel.sendMessage("Данная команда не завелась с пинка");
         break;
+        case "say" :
+        message
+        break;
         case "help" :
         message.channel.sendMessage("```\n СПРАВКА \n -help - помощь \n -gURLAvatar - Получить аватарку\n -kick - Выгнать пользователя\n -ban - Выгнать пользователя и запретить доступ к серверу ``` ");
-        break
+        break;
         case "" :
             message.channel.sendMessage("Введите команду,список команд -help");
-        break
+        break;
         default:
             message.channel.sendMessage("Такой команды не существует! Cписок команд -help");
     }
