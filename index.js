@@ -54,7 +54,7 @@ robot.on("message" , function(message)  {
 
     var args = message.content.substring(PREFIX.length).split(" ");
 
-    switch (args[0].toLoverCase()) {
+    switch (args[0].toLowerCase()) {
         case "tust":
         message.channel.sendMessage("AGA");
         break;
