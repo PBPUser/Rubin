@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const robot = new Discord.Client();
 const YTDL = require("ytdl-core");
-robot.login("NDc5MTM4OTA3MTUwMjIxMzIz.DlWCaA.uO6zARItVRqep-HQDS8nYEiafHo");
+robot.login(process.env.BOT_TOKEN);
 
 const PREFIX = "-";
 
