@@ -121,7 +121,7 @@ robot.on("message" , function(message)  {
         case "about":
         message.channel.sendMessage("Я бот")
             break
-        case "gColor":
+        case "gcolor":
         /*if(!args[1]) {
             message.channel.sendMessage("Укажите цвет в формате HEX");
             return;
@@ -137,7 +137,7 @@ robot.on("message" , function(message)  {
         //message.replay("this command is hot!");
 
         break;
-        case "gURLAvatar" :
+        case "gurlavatar" :
         if(!args[1]) {
             if(message.author.avatarURL = nullavatar){
                 message.channel.sendMessage("Невозможно получить аватарку");
@@ -155,7 +155,7 @@ robot.on("message" , function(message)  {
         
         break;
 
-        case "setNick" :
+        case "setnick" :
         if(args[0]){
         //message.author.sendMessage("Хех");
         message.channel.sendMessage("Никнейм сброшен.");
