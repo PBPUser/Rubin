@@ -81,7 +81,7 @@ robot.on("message" , function(message)  {
     if (user) {
       const member = message.guild.member(user);
       if (member) {
-        member.kick('Optional reason that will display in the audit logs').then(() => {
+        member.kick('ТО ЧТО ДОЛЖНО БЫТЬ В ЛОГАХ)').then(() => {
           message.reply(`Вы успешно кикнули ${user.tag}`);
         }).catch(err => {
           message.reply(`Неудалось кикнуть пользователя ${user.tag}`);
