@@ -58,6 +58,15 @@ robot.on("message" , function(message)  {
         case "tust":
         message.channel.sendMessage("AGA");
         break;
+        case "embed" :
+        const embed = new Discord.RichEmbed()
+      .setTitle('Hmm...')
+      .setColor(0xFF0000)
+      .setDescription('MMM...');
+        message.channel.send(embed);
+        break;
+        case "":
+        break;
         case "workingtest":
         message.channel.sendMessage("i am WORKING");
         break;
