@@ -38,7 +38,7 @@ robot.on("guildMemberAdd",function(member) {
        if(servId == "340493689325486080"){ //DM
         //member.kick('Optional reason that will display in the audit logs').then(() => {
           //message.reply(`Вы успешно кикнули ${user.tag}`);
-        })
+        //})
         
             console.log("Joined to DM!");
             member.user.sendMessage (member.guild.id);
