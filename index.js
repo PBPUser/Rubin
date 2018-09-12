@@ -36,7 +36,11 @@ robot.on("guildMemberAdd",function(member) {
     else
 
     if(servId == "340493689325486080"){ //DM
-        if(member.author.id == blockedID) return;
+        member.kick('Optional reason that will display in the audit logs').then(() => {
+          message.reply(`Вы успешно кикнули ${user.tag}`);
+        )}
+        
+        }
             console.log("Joined to DM!");
             member.user.sendMessage (member.guild.id);
         member.guild.channels.find("id","425016137554591745").sendMessage(member.toString() + ",привет!");
