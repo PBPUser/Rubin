@@ -63,6 +63,15 @@ robot.on("message" , function(message)  {
         case "tust":
         message.channel.sendMessage("AGA");
         break;
+        case "88005553535" :
+        message.channel.sendMessage("https://www.youtube.com/watch?v=SxbTtFRN5cE");
+        break;
+        case "228" :
+        message.channel.sendMessage("Босса мы не бросим!");
+        break;
+        case "1337" :
+        message.channel.sendMessage("Такой команды не существует! Cписок команд Хрен тебе)");
+        break;
         case "embed" :
         const embed = new Discord.RichEmbed()
       .setTitle('Hmm...')
