@@ -162,12 +162,22 @@ robot.on("message" , function(message)  {
 
         break;
         case "gurlavatar" :
-              const embed = new Discord.RichEmbed()
-            .setTitle('It s magic')
-            .setColor(0xFF0000)
-            .setDescription('Вот твоя аватарка!')
-            .setImage(message.author.avatarURL);
-            message.channel.send({embed});
+message.channel.send({embed: {
+    color: 3447003,
+    author: {
+      name: message.user.username,
+      icon_url: message.user.avatarURL
+    },
+    title: "This is an embed",
+    url: "http://google.com",
+    description: "This is a test embed to showcase what they look like and what they can do.",
+    timestamp: new Date(),
+    footer: {
+      icon_url: message.user.avatarURL,
+      text: "© Example"
+    }
+  }
+});
                 //message.channel.sendMessage("Вот твоя аватарка,"+ message.author.username + message.author.avatarURL
         break;
 
