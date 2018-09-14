@@ -73,11 +73,12 @@ robot.on("message" , function(message)  {
         message.channel.sendMessage("Такой команды не существует! Cписок команд Хрен тебе)");
         break;
         case "embed" :
-        /*const embed = new Discord.RichEmbed()
-      .setTitle('Hmm...')
-      .setColor(0xFF0000)
-      .setDescription('MMM...');
-        message.channel.send(embed);*/
+        const embed = new Discord.RichEmbed()
+        .setTitle('Hmm...')
+        .setColor(0xFF0000)
+        .setDescription('MMM...')
+        .setImage("https://i.ytimg.com/vi/DXtGUzEz6qc/maxresdefault.jpg")
+        message.channel.send(embed);
         break;
         case "":
         break;
@@ -116,7 +117,7 @@ robot.on("message" , function(message)  {
               const member = message.guild.member(user);
               if (member) {
                 member.ban({
-                  reason: 'They were bad!',
+                  reason: 'УХАДИ!',
                 }).then(() => {
                   message.reply(`Успешно забанен ${user.tag}`);
                 }).catch(err => {y
@@ -165,8 +166,8 @@ robot.on("message" , function(message)  {
             .setTitle('It s magic')
             .setColor(0xFF0000)
             .setDescription('Вот твоя аватарка!')
-            .setImage("message.author.avatarURL");
-            message.channel.sendEmbed(embed);
+            .setImage(message.author.avatarURL);
+            message.channel.send({embed});
                 //message.channel.sendMessage("Вот твоя аватарка,"+ message.author.username + message.author.avatarURL
         break;
 
