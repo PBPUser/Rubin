@@ -76,8 +76,8 @@ robot.on("message" , function(message)  {
         const embed = new Discord.RichEmbed()
         .setTitle('Hmm...')
         .setColor(0xFF0000)
-        .setDescription('MMM...')
-        .setImage("https://i.ytimg.com/vi/DXtGUzEz6qc/maxresdefault.jpg");
+        .setImage("https://i.ytimg.com/vi/DXtGUzEz6qc/maxresdefault.jpg")
+        .setDescription('MMM...');
         message.channel.send(embed);
         break;
         case "":
