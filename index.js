@@ -72,14 +72,14 @@ robot.on("message" , function(message)  {
         case "1337" :
         message.channel.sendMessage("Такой команды не существует! Cписок команд Хрен тебе)");
         break;
-        case "embed" :
+        /*case "embed" :
         const embed = new Discord.RichEmbed()
         .setTitle('Hmm...')
         .setColor(0xFF0000)
         .setImage("https://i.ytimg.com/vi/DXtGUzEz6qc/maxresdefault.jpg")
         .setDescription('MMM...');
         message.channel.send(embed);
-        break;
+        break;*/
         case "":
         break;
         case "workingtest":
