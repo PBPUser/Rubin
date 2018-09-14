@@ -77,7 +77,7 @@ robot.on("message" , function(message)  {
         .setTitle('Hmm...')
         .setColor(0xFF0000)
         .setDescription('MMM...')
-        .setImage("https://i.ytimg.com/vi/DXtGUzEz6qc/maxresdefault.jpg")
+        .setImage("https://i.ytimg.com/vi/DXtGUzEz6qc/maxresdefault.jpg");
         message.channel.send(embed);
         break;
         case "":
