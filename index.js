@@ -166,7 +166,13 @@ robot.on("message" , function(message)  {
                 message.channel.sendMessage("Невозможно получить аватарку");
             }
             else{
-                message.channel.sendMessage("Вот твоя аватарка,"+ message.author.username + message.author.avatarURL);
+                const embed = new Discord.RichEmbed()
+            .setTitle('It s magic')
+            .setColor(0xFF0000)
+            .setDescription('Вот твоя аватарка!' + message.author.username);
+            .setImage(message.author.avatarURL);
+                message.channel.send(embed);
+                //message.channel.sendMessage("Вот твоя аватарка,"+ message.author.username + message.author.avatarURL);
             }
         } 
         
