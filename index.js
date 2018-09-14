@@ -161,29 +161,13 @@ robot.on("message" , function(message)  {
 
         break;
         case "gurlavatar" :
-        if(!args[1]) {
-            if(message.author.avatarURL = nullavatar){
-                message.channel.sendMessage("Невозможно получить аватарку");
-            }
-            else{
                 const embed_1 = new Discord.RichEmbed()
             .setTitle('It s magic')
             .setColor(0xFF0000)
             .setDescription('Вот твоя аватарка!')
             .setImage('message.author.avatarURL');
-            
-
-                message.channel.send(embed_1);
-                //message.channel.sendMessage("Вот твоя аватарка,"+ message.author.username + message.author.avatarURL);
-            }
-        } 
-        
-        else
-
-        if(!args[0]){
-            message.channel.sendMessage("```\nРезультат:\nПоезд сделал бум ```");
-    }
-        
+            message.channel.send(embed_1);
+                //message.channel.sendMessage("Вот твоя аватарка,"+ message.author.username + message.author.avatarURL
         break;
 
         case "setnick" :
