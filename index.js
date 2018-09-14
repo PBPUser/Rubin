@@ -73,11 +73,11 @@ robot.on("message" , function(message)  {
         message.channel.sendMessage("Такой команды не существует! Cписок команд Хрен тебе)");
         break;
         case "embed" :
-        const embed = new Discord.RichEmbed()
+        /*const embed = new Discord.RichEmbed()
       .setTitle('Hmm...')
       .setColor(0xFF0000)
       .setDescription('MMM...');
-        message.channel.send(embed);
+        message.channel.send(embed);*/
         break;
         case "":
         break;
@@ -161,12 +161,12 @@ robot.on("message" , function(message)  {
 
         break;
         case "gurlavatar" :
-                const embed_1 = new Discord.RichEmbed()
+              const embed = new Discord.RichEmbed()
             .setTitle('It s magic')
             .setColor(0xFF0000)
             .setDescription('Вот твоя аватарка!')
             .setImage('message.author.avatarURL');
-            message.channel.send(embed_1);
+            message.channel.send(embed);
                 //message.channel.sendMessage("Вот твоя аватарка,"+ message.author.username + message.author.avatarURL
         break;
 
