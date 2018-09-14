@@ -166,7 +166,7 @@ robot.on("message" , function(message)  {
             .setColor(0xFF0000)
             .setDescription('Вот твоя аватарка!')
             .setImage('message.author.avatarURL');
-            message.channel.send(embed);
+            message.channel.sendEmbed(embed);
                 //message.channel.sendMessage("Вот твоя аватарка,"+ message.author.username + message.author.avatarURL
         break;
 
