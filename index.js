@@ -61,6 +61,14 @@ robot.on("message" , function(message)  {
         case "tust":
         message.channel.sendMessage("AGA");
         break;
+        case "rnick":
+        
+        message.channel.sendMessage("done");
+        break;
+        case "Otell":
+        const user = message.mentions.users.first();
+        user.user.sendMessage (message.text);
+        break;
         case "88005553535" :
         message.channel.sendMessage("https://www.youtube.com/watch?v=SxbTtFRN5cE");
         break;
