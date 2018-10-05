@@ -65,7 +65,7 @@ robot.on("message" , function(message)  {
         
         message.channel.sendMessage("done");
         break;
-        case "Otell":
+        case "otell":
         const user = message.mentions.users.first();
         user.user.sendMessage (message.text);
         break;
