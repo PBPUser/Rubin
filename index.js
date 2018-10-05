@@ -10,6 +10,25 @@ var servers = {};
 var nullavatar = '';
 var blockedID = '218646139442954240';
 
+static void UpdatePresence()
+    {
+        DiscordRichPresence discordPresence;
+        memset(&discordPresence, 0, sizeof(discordPresence));
+        discordPresence.state = "Ebem v sraku";
+        discordPresence.details = "Joyousmicor";
+        discordPresence.startTimestamp = 1507665886;
+        discordPresence.endTimestamp = 1507665886;
+        discordPresence.largeImageKey = "down";
+        discordPresence.largeImageText = "Numbani";
+        discordPresence.smallImageText = "Rogue - Level 100";
+        discordPresence.partyId = "ae488379-351d-4a4f-ad32-2b9b01c91657";
+        discordPresence.partySize = 1;
+        discordPresence.partyMax = 5;
+        discordPresence.spectateSecret = "MTIzNDV8MTIzNDV8MTMyNDU0";
+        discordPresence.joinSecret = "MTI4NzM0OjFpMmhuZToxMjMxMjM= ";
+        Discord_UpdatePresence(&discordPresence);
+    }
+
 function play(Connection,message) {
     var server = servers[message.gulid.id];
     server.dispatcher = Connection.playstream(YTDL(server.quene[0], {filter: "audioonly"}));
@@ -65,10 +84,10 @@ robot.on("message" , function(message)  {
         
         message.channel.sendMessage("done");
         break;
-        case "otell":
+        /*case "otell":
         const user = message.mentions.users.first();
         user.user.sendMessage (message.text);
-        break;
+        break;*/
         case "88005553535" :
         message.channel.sendMessage("https://www.youtube.com/watch?v=SxbTtFRN5cE");
         break;
