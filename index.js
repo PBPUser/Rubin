@@ -2,11 +2,9 @@ const Discord = require('discord.js');
 const robot = new Discord.Client();
 const YTDL = require("ytdl-core");
 robot.login(process.env.BOT_TOKEN);
-//hmm...
 
 const PREFIX = "-";
 
-var token = 'NDc5MTM4OTA3MTUwMjIxMzIz.DlWCaA.uO6zARItVRqep-HQDS8nYEiafHo';
 var owerlord = '@AMDUser#8732';    
 var servers = {};
 var nullavatar = '';
