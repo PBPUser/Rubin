@@ -10,7 +10,7 @@ var servers = {};
 var nullavatar = '';
 var blockedID = '218646139442954240';
 
-static void UpdatePresence()
+/*static void UpdatePresence()
     {
         DiscordRichPresence discordPresence;
         memset(&discordPresence, 0, sizeof(discordPresence));
@@ -27,7 +27,7 @@ static void UpdatePresence()
         discordPresence.spectateSecret = "MTIzNDV8MTIzNDV8MTMyNDU0";
         discordPresence.joinSecret = "MTI4NzM0OjFpMmhuZToxMjMxMjM= ";
         Discord_UpdatePresence(&discordPresence);
-    }
+    }*/
 
 function play(Connection,message) {
     var server = servers[message.gulid.id];
